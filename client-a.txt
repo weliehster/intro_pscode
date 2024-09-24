@@ -1,4 +1,31 @@
 # Client Task A #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+pseudocode 
 
+START
+random-number=random.int(1,10)
+
+tries=1
+
+Question= input("Would you like to play a game?[Y/N]")
+
+IF Question =="N" then PRINT("Have a good day")
+
+IF Question =="Y" then PRINT(I'm thinking of a number between 1 and 10)  
+
+guess=int(input("make a guess"))
+
+IF guess>random_number then PRINT("guess lower")
+
+IF guess<random_number then PRINT("guess higher")
+
+WHILE guess!=random_number 
+
+ tries +=1
+
+guess=int(input("try again"))
+
+IF guess <random_number then PRINT("guess higher")
+
+IF guess == random-number then PRINT("you're correct")
