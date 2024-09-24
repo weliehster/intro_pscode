@@ -1,4 +1,15 @@
 # Client Task C #
 # Add your pseudocode to this file below this line: #
-# ------------------------------------------------- #
+Product package counter
+BEGIN
+    SET start = 2
+    SET end = 50
+    SET increment = 2
+
+    FOR i FROM start TO end STEP increment DO
+        PRINT i
+    END FOR
+END
+
+
 
