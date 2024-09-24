@@ -3,29 +3,18 @@
 # ------------------------------------------------- #
 pseudocode 
 
-START
-random-number=random.int(1,10)
+pseudocode guess the number game
 
-tries=1
 
-Question= input("Would you like to play a game?[Y/N]")
-
-IF Question =="N" then PRINT("Have a good day")
-
-IF Question =="Y" then PRINT(I'm thinking of a number between 1 and 10)  
-
-guess=int(input("make a guess"))
-
-IF guess>random_number then PRINT("guess lower")
-
-IF guess<random_number then PRINT("guess higher")
-
-WHILE guess!=random_number 
-
- tries +=1
-
-guess=int(input("try again"))
-
-IF guess <random_number then PRINT("guess higher")
-
-IF guess == random-number then PRINT("you're correct")
+1.Generate a "random number" between 1 and 10 .
+2. Set chances = 3.
+3.Prompt player to enter a guess.
+4. IF player's guess equals randomNumber:
+        a. Print "Congratulations! You guessed the number."
+        b. BREAK the loop.
+5. ELSE:
+        a. Subtract 1 from chances.
+        b. IF chances > 0:
+            - Print "Wrong guess. Try again."
+        c. IF chances == 0:
+            - Print "Sorry, you've run out of guesses. The correct number was randomNumber."
