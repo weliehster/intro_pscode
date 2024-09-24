@@ -1,15 +1,14 @@
 # Client Task C #
 # Add your pseudocode to this file below this line: #
 Product package counter
-BEGIN
-    SET start = 2
-    SET end = 50
-    SET increment = 2
 
-    FOR i FROM start TO end STEP increment DO
-        PRINT i
-    END FOR
+START
+
+1. SET packageCount = 2.
+
+2. WHILE packageCount <= 50:
+    a. Print packageCount.
+    b. Increment packageCount by 2.
+
 END
-
-
 
