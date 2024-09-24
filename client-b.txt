@@ -1,4 +1,53 @@
 # Client Task B #
 # Add your pseudocode to this file below this line: #
-# ------------------------------------------------- #
+find the spot:
+//write commands for requirements/ variables
+START
+    Initialize warehouseGrid with dimensions (rows, columns)
+    Initialize startLocation to customer's starting point
+    Initialize targetLocation to desired location
+    Initialize visitedLocations as an empty list
+    Initialize path as an empty list
+
+//write conditional commands for path to target location   
+ IF findPath(warehouseGrid, startLocation, targetLocation, visitedLocations, path) THEN
+        PRINT "Path found: " + path
+    ELSE
+        PRINT "No path found to the target location."
+END FUNCTION
+
+FUNCTION findPath(grid, currentLocation, targetLocation, visited, path)
+    IF currentLocation == targetLocation THEN
+        RETURN TRUE
+    
+    IF currentLocation is out of bounds OR currentLocation is in visited THEN
+        RETURN FALSE
+    
+    ADD currentLocation to visited
+    ADD currentLocation to path
+
+    // Possible movements: north, south, east, west
+    FOR direction IN ["north", "south", "east", "west"] DO
+        newLocation = getNewLocation(currentLocation, direction)
+        
+        IF findPath(grid, newLocation, targetLocation, visited, path) THEN
+            RETURN TRUE
+
+    // Backtrack if no path is found
+    REMOVE currentLocation from path
+    RETURN FALSE
+END FUNCTION
+
+FUNCTION getNewLocation(currentLocation, direction)
+    SWITCH direction
+        CASE "north":
+            RETURN (currentLocation.row - 1, currentLocation.column)
+        CASE "south":
+            RETURN (currentLocation.row + 1, currentLocation.column)
+        CASE "east":
+            RETURN (currentLocation.row, currentLocation.column + 1)
+        CASE "west":
+            RETURN (currentLocation.row, currentLocation.column - 1)
+END FUNCTION
+
 
